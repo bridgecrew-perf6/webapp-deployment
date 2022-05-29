@@ -4,4 +4,5 @@
 <h2> Creating CI CD Pipeline </h2>
 <h2> Creating pipeline as code by UI </h2>
 <h2> Deploying pipeline as code by UI </h2>
+<h2> 29 may 2022 </h2>
 <h3> Today's date: <%= (new java.util.Date()).toLocaleString()%> </h3>
