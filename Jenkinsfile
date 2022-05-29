@@ -19,5 +19,12 @@ pipeline {
       }
     }
 
+    stage('Results') {
+      steps {
+        junit '**/*.xml'
+        archiveArtifacts '**/*.war'
+      }
+    }
+
   }
 }
