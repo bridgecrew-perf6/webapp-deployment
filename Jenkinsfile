@@ -15,19 +15,18 @@ pipeline {
           }
         }
 
-        stage('package') {
+        stage('Regression') {
           steps {
-            sh 'mvn package'
+            sh 'mvn -Dtest=TestGreeter#greetShouldIncludeTheOneBeingGreeted() test'
           }
         }
 
       }
     }
 
-    stage('Results') {
+    stage('package') {
       steps {
-        junit '**/*.xml'
-        archiveArtifacts '**/*.war'
+        sh 'mvn package'
       }
     }
 
