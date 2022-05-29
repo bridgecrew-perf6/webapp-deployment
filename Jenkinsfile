@@ -7,8 +7,8 @@ tools {
     stages {
         stage('Build') {
             steps {
-                git credentialsId: '34dcf6f4-7d4e-4a93-8edf-b31651b7586b', url: 'https://github.com/guptarame/webapp-deployment.git'
-                  }
+                git credentialsId: '34dcf6f4-7d4e-4a93-8edf-b31651b7586b', url: 'https://github.com/guptarame/webapp-deployment.git'                  
+				}
                         }
          stage('Test') {
             steps {
