@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        git(url: 'https://github.com/guptarame/time-tracker.git', branch: 'master', credentialsId: 'cred')
+        git(url: 'https://github.com/guptarame/time-tracker.git', branch: 'blueocean')
       }
     }
 
