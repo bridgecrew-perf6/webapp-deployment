@@ -2,6 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Build') {
+      agent any
       steps {
         echo 'echo "Build1"'
         tool(name: 'maven', type: '\'Maven3.0.5\'')
