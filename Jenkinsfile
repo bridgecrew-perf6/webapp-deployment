@@ -8,14 +8,19 @@ pipeline {
     }
 
     stage('test') {
-      steps {
-        sh 'mvn test'
-      }
-    }
+      parallel {
+        stage('test') {
+          steps {
+            sh 'mvn test'
+          }
+        }
 
-    stage('package') {
-      steps {
-        sh 'mvn package'
+        stage('package') {
+          steps {
+            sh 'mvn package'
+          }
+        }
+
       }
     }
 
