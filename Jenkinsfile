@@ -9,7 +9,7 @@ pipeline {
 
     stage('regression') {
       steps {
-        sh 'mvn -Dtest=TestGreeter#greetShouldIncludeTheOneBeingGreeted() test'
+        sh 'mvn -Dtest=TestGreeter#greetShouldIncludeTheOneBeingGreeted test'
       }
     }
 
