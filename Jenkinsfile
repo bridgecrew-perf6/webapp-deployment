@@ -8,19 +8,8 @@ pipeline {
     }
 
     stage('test') {
-      parallel {
-        stage('test') {
-          steps {
-            sh 'mvn test'
-          }
-        }
-
-        stage('Regression') {
-          steps {
-            sh 'mvn -Dtest=TestGreeter#greetShouldIncludeTheOneBeingGreeted test'
-          }
-        }
-
+      steps {
+        sh 'mvn test'
       }
     }
 
