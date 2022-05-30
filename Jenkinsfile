@@ -13,9 +13,9 @@ pipeline {
       }
     }
 
-    stage('package') {
+    stage('regression') {
       steps {
-        sh 'mvn package'
+        sh 'mvn -Dtest=TestGreeter#greetShouldIncludeTheOneBeingGreeted() test'
       }
     }
 
