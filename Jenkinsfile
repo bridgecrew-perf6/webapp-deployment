@@ -1,7 +1,7 @@
 pipeline {
     agent any
 tools {
-    withMaven(globalMavenSettingsConfig: 'null', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: 'null')
+    maven 'MAVEN_HOME'
 }
 }
 
