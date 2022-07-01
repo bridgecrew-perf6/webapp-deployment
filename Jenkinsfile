@@ -1,7 +1,9 @@
 pipeline {
     agent any
 tools {
-    maven 'MAVEN_HOME'
+    withMaven(globalMavenSettingsConfig: 'null', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: 'null') {
+    // some block
+}
 }
 
     stages {
